@@ -34,6 +34,12 @@ public class WatchedProject : IDisposable
 			var resolved = directory.ResolveLinkTarget( true );
 			if ( resolved == null )
 				throw new NullReferenceException( $"Resolved path for symlink {directoryPath} == null" );
+			if ( !resolved.Exists )
+			{
+				Log.Warning( $"Broken symlink {directoryPath} -/> {resolved.FullName}" );
+				continue;
+			}
+
 			var watcher = new FileSystemWatcher( resolved.FullName );
 			watcher.Filters.Add( "*.cs" );
 			watcher.Filters.Add( "*.razor" );
