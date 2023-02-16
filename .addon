@@ -1,0 +1,17 @@
+{
+  "Title": "SymlinkWatcher",
+  "Type": "tool",
+  "Org": "parparpar",
+  "Ident": "symlinkwatcher",
+  "Tags": "tool",
+  "Schema": 1,
+  "HasAssets": true,
+  "AssetsPath": "",
+  "ResourcePaths": null,
+  "HasCode": true,
+  "CodePath": "code",
+  "Metadata": {
+    "ProjectTemplate": null,
+    "CsProjName": ""
+  }
+}
