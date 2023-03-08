@@ -26,7 +26,7 @@ public class WatchedProject : IDisposable
 		if ( ServerContent == null )
 			ToolAddon = Internal.GetToolAddonByIdent( fullIdent );
 
-		foreach ( var directoryPath in Directory.GetDirectories( path, "*", SearchOption.TopDirectoryOnly ) )
+		foreach ( var directoryPath in Directory.GetDirectories( path, "*", SearchOption.AllDirectories ) )
 		{
 			var directory = new DirectoryInfo( directoryPath );
 			if ( directory.LinkTarget == null )
